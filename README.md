@@ -32,10 +32,10 @@ The model’s performance was visualized using **T-SNE**, which showed clear clu
 
 ## Results
 - **Validation Accuracy**: The model achieved a validation accuracy of 98%, demonstrating that the learned encoder effectively classified the images.
+![alt text](image.png)
+
 - **T-SNE Visualization**: The feature space showed well-clustered data points, indicating that the model effectively distinguished between different classes.
+![alt text](image-1.png)
 
 ## Conclusion
 This project successfully performed image classification in a limited data environment by utilizing **Self-Supervised Learning** and **Contrastive Learning**. The **SimCLR** method effectively learned the representations of the data, and data augmentation helped address overfitting and improve the generalization performance of the model.
-
-![alt text](image.png)
-![alt text](image-1.png)
