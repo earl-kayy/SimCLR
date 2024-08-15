@@ -6,6 +6,15 @@ This project aims to perform image classification in a limited data environment 
 ## Model: SimCLR
 **SimCLR** is a form of Self-Supervised Learning where pairs of augmented images are generated from the same original image, then passed through an encoder and a projection head to create feature vectors. The similarity between the two vectors is minimized using **Contrastive Loss**. The learned encoder is later used for the **Downstream Task(Classification)**.
 
+### Pipeline of SimCLR
+![alt text](image-3.png)
+The following diagram illustrates the pipeline for SimCLR. In SimCLR, an input image `x` is augmented twice using random transformations `t` and `t'`, resulting in two different views, `x̃ᵢ` and `x̃ⱼ`. These views are then passed through an encoder `f(·)` to produce representations `hᵢ` and `hⱼ`. A projection head `g(·)` further maps these representations to latent vectors `zᵢ` and `zⱼ`.
+
+The goal of SimCLR is to maximize the agreement between these two latent vectors using a contrastive loss. The contrastive loss encourages similar images to have representations close to each other in the latent space while pushing apart representations of different images.
+
+Below shows how the augmentation was performed.
+![alt text](image-4.png)
+
 ### Key Components:
 1. **Pretext Task**: A phase where the model learns the features of the data by training on pairs of augmented images.
 2. **Downstream Task**: A phase where the trained encoder is used to perform image classification.
@@ -27,3 +36,6 @@ The model’s performance was visualized using **T-SNE**, which showed clear clu
 
 ## Conclusion
 This project successfully performed image classification in a limited data environment by utilizing **Self-Supervised Learning** and **Contrastive Learning**. The **SimCLR** method effectively learned the representations of the data, and data augmentation helped address overfitting and improve the generalization performance of the model.
+
+![alt text](image.png)
+![alt text](image-1.png)
