@@ -3,7 +3,7 @@
 ## Introduction
 This project aims to perform image classification in a limited data environment using the **MNIST** dataset with **Self-Supervised Learning** and **Contrastive Learning** techniques. Only 50 handwritten digit images per class were provided, resulting in a very limited data size. To overcome this, the **SimCLR** approach was used for data augmentation and representation learning.
 
-## Model: SimCLR
+## SimCLR
 **SimCLR** is a form of Self-Supervised Learning where pairs of augmented images are generated from the same original image, then passed through an encoder and a projection head to create feature vectors. The similarity between the two vectors is minimized using **Contrastive Loss**. The learned encoder is later used for the **Downstream Task(Classification)**.
 
 ### Pipeline of SimCLR
